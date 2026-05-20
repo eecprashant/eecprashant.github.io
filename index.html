@@ -420,6 +420,30 @@
         skillBars.forEach(bar => {
             observer.observe(bar);
         });
+        const notesBtn =
+            document.getElementById('notes-btn');
+
+        const notesMenu =
+            document.getElementById('notes-menu');
+
+        notesBtn.addEventListener('click', function (e) {
+
+            e.stopPropagation();
+
+            notesMenu.classList.toggle('hidden');
+
+        });
+        // Close Dropdown When Clicking Outside
+        document.addEventListener('click', function (e) {
+
+            if (!notesMenu.contains(e.target)
+                && !notesBtn.contains(e.target)) {
+
+                notesMenu.classList.add('hidden');
+
+            }
+
+        });
     </script>
     <script>AOS.init();</script>
     <script>feather.replace();</script>
