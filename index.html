@@ -57,7 +57,44 @@
             <a href="#about" class="nav-link">About</a>
             <a href="#skills" class="nav-link">Skills</a>
             <a href="#contact" class="nav-link">Contact</a>
-            <a href="img/electro unit 1.pdf" target="_blank" class="nav-link">Download Notes</a>
+            <!-- Download Notes -->
+            <div class="relative">
+
+                <button id="notes-btn" class="nav-link flex items-center focus:outline-none">
+
+                    Download Notes
+
+                    <i data-feather="chevron-down" class="ml-1 w-4 h-4"></i>
+
+                </button>
+
+                <!-- Dropdown -->
+                <div id="notes-menu"
+                    class="hidden absolute right-0 bg-gray-800 mt-3 rounded-lg shadow-lg w-64 z-50 overflow-hidden">
+
+                    <a href="notes/electro unit 1.pdf" download="Electronic-Unit-1.pdf"
+                        onclick="forceDownload(event, 'notes/electro-unit-1.pdf', 'Electronic-Unit-1.pdf')"
+                        class="block px-4 py-3 hover:bg-blue-600 transition duration-300">
+                        Electronic Unit 1
+                    </a>
+
+                    <a href="notes/CHERM complete notes.pdf" download="CHERM"
+                        class="block px-4 py-3 hover:bg-blue-600 transition duration-300">
+                        CHERM Notes
+                    </a>
+
+                    <a href="notes/note.txt" download class="block px-4 py-3 hover:bg-blue-600 transition duration-300"
+                        onclick="alert('Notes will be uploaded soon! Please check back later.'); return false;">
+                        DBMS Notes
+                    </a>
+
+                    <a href="notes/networking-notes.pdf" download
+                        class="block px-4 py-3 hover:bg-blue-600 transition duration-300">
+                        Networking Notes
+                    </a>
+
+                </div>
+            </div>
         </div>
         <button class="md:hidden focus:outline-none" id="menu-btn">
             <i data-feather="menu"></i>
