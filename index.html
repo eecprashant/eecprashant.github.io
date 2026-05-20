@@ -412,6 +412,7 @@
         skillBars.forEach(bar => {
             observer.observe(bar);
         });
+        <!-- Notes Drop down -->
         const notesBtn =
             document.getElementById('notes-btn');
 
@@ -425,7 +426,7 @@
             notesMenu.classList.toggle('hidden');
 
         });
-        // Close Dropdown When Clicking Outside
+          <!-- Close Dropdown When Clicking Outside -->
         document.addEventListener('click', function (e) {
 
             if (!notesMenu.contains(e.target)
